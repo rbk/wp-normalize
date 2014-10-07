@@ -1,0 +1,138 @@
+.guru-container{
+
+	width:760px;
+	margin-top:25px;
+}
+
+.guru-container aside.side-menu{
+
+	width:240px;
+	float:left;
+}
+
+.guru-container aside.side-menu{
+	
+	margin-top:15px;	
+}
+
+.guru-container aside.side-menu ul{
+
+	padding:0;
+}
+
+.guru-container aside.side-menu ul li{
+	
+	margin:0;
+	padding: 10px;
+	min-height: 40px;
+	background: #282727; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#413f3f', endColorstr='#282727'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#413f3f), to(#282727)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #413f3f,  #282727); /* for firefox 3.6+ */
+}
+
+.guru-container aside.side-menu ul li a{
+	
+	text-transform: uppercase;
+	font-family: "helvetica";
+	color:#bae5fe;
+	text-decoration: none;
+	font-size:16px;
+	display: block;
+	padding-bottom: 5px;
+}
+
+.guru-container aside.side-menu ul li span{
+
+	color: #d8a175;
+}
+
+
+.guru-container aside.side-menu ul li a:hover, .guru-container aside.side-menu ul li a.current{
+
+	color:#fff;
+}
+
+.guru-container aside.side-menu ul li:last-child a{
+
+	border-bottom-width: 0;
+}
+
+.guru-container section.guru-content{
+	
+	margin-top:27px;
+	width:500px;
+	float:right;
+	padding:0 10px 10px 10px;
+	background: #e3f0ff;
+}
+
+.guru-container header{
+
+	font-family: "helvetica";
+	width:760px;
+	float:left;
+	margin:0;
+	padding:0;
+	height:80px;
+	line-height:80px;
+	color:#0072fd !important;
+}
+
+.guru-container section h2{
+	
+	background: url(../images/guru-logo.png) no-repeat;
+	display: block;
+	width:224px;
+	height:70px;
+	text-indent: -9999px;
+	margin-left:5px;
+}
+
+.guru-container p.submit{
+
+	text-align: right;
+}
+
+form#guru_settings fieldset{
+
+	display: none;
+}
+
+form#guru_settings fieldset legend{
+
+	font-family: "helvetica";
+	font-size:25px;
+	margin: 10px 0;
+	line-height: 50px;
+	border-bottom: 1px solid #98bae1;
+	width:100%;
+}
+
+.guru-container .form-table tbody tr{
+	
+}
+
+.guru-container .form-table tbody tr th, .form-table tbody tr td{
+	
+	padding-top: 15px;
+}
+
+.guru-container .form-table tbody tr th{
+	
+	background: #f3f8ff;
+	color: #253f5e;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: right;
+	padding-top:25px;
+}
+
+.guru-container .form-table tbody tr td input{
+	
+	line-height: 25px;
+	border:1px solid #98bae1;
+	border-radius: 3px;
+	width: 100%;
+}
+
