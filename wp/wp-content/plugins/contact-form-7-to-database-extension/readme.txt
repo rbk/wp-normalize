@@ -5,17 +5,15 @@ Tags: contact form,database,contact form database,save contact form,form databas
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 3.2.1
-Tested up to: 3.9.1
-Stable tag: 2.8.9
+Tested up to: 4.0
+Stable tag: 2.8.16
 
-Saves submitted form data to the database and allow you to export the data to a file and use short codes to display it.
+Saves submitted form data to the database. Export the data to a file and or short codes to display it.
 
 == Description ==
 
-Find detailed information, including a video tutorial on the <a href="http://cfdbplugin.com/">CFDB Plugin Site</a>
-
-The "CFDB" plugin saves contact form submissions to your WordPress database and provides short codes to retrieve and display the data.
-See the CFDB Documentation Site
+The "CFDB" plugin saves contact form submissions to your WordPress database and provides and administration page and short codes to view and display the data.
+Video tutorial on the <a href="http://cfdbplugin.com/">CFDB Plugin Site</a>
 
 By simply installing the plugin, it will automatically begin to capture submissions from:
 
@@ -82,6 +80,30 @@ You can always deactivate the plugin without loosing data.
 1. Admin Panel view of submitted form data
 
 == Changelog ==
+
+= 2.8.17 =
+* Bug fix in [cfdb-html] variable substitution when data for column is not present.
+
+= 2.8.16 =
+* Generating the [submit_time] tag for Contact Form 7 is now an option in the Options page and is off by default to avoid the post being flagged as spam
+* Added some protection against cross site scripting
+
+= 2.8.15 =
+* Bug Fix: No longer generating 'submit_url' for Contact Form 7 email because it seems to cause CF7 to think it is a spam submission and it drops it.
+* Bug fix: when form name has commas in it, retrieving its data from the DB did not work because plugin was treating it as a list of form names
+
+= 2.8.14 =
+* Fix to capturing Gravity Forms list values
+
+= 2.8.13 =
+* Bug fix in "trans"
+
+= 2.8.12 =
+* Work-around for WP bug https://core.trac.wordpress.org/ticket/29658
+
+= 2.8.11 =
+* Bug fix related to Excel Internet Query export
+* Bug fix when HTML special characters in short code attributes
 
 = 2.8.10 =
 * Bug fix related to "trans" with multiple transform functions
