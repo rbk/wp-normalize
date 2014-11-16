@@ -2,22 +2,14 @@ module.exports = function(grunt) {
     
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {                  // Task
-            dist: {                   // Target
-              options: {              // Target options
-                sassDir: 'sass',
-                cssDir: 'css',
-                environment: 'production',
-                outputStyle: 'compressed'
-              }
-            },
-            dev: {                    // Another target
-              options: {
-                sassDir: 'sass',
-                cssDir: 'css',
-                environment: 'development',
-                outputStyle: 'nested'
-              }
+        sass: {
+            dist: {
+                options: {
+                  style: 'compressed'
+                },
+                files: {
+                    'css/app.css' : 'scss/app.scss'
+                }
             }
         },
         uglify: {
@@ -32,7 +24,7 @@ module.exports = function(grunt) {
                     beautify: true
                 },
                 files: {
-                    'js/build/production.min.js': ['']
+                    'js/build/production.min.js': ['js/responsiveslides.js','common.js']
                 }
             }
         },
@@ -42,7 +34,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['compass']
+                tasks: ['sass']
             },
             js: {
                 files: 'js/*.js',
@@ -60,7 +52,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-livereload');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', [ 'watch' ]);
 

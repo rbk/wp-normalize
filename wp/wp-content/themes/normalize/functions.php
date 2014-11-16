@@ -84,18 +84,14 @@ function underscores_scripts() {
 		// wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false);
 		// wp_enqueue_script('jquery');
 	}
-	
-	wp_enqueue_script('underscores-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
-	wp_enqueue_script( 'underscores-common.js', get_template_directory_uri() . '/js/common.js', array(), '20120206', true );
-	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'underscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'underscores-common.js', get_template_directory_uri() . '/js/build/production.min.js', array(), '20120206', true );
 
 	// Live Reload
 	$host = $_SERVER['HTTP_HOST'];
 	if( $host == 'gurustudev.com' ){
 		wp_enqueue_script( 'livereload', 'http://gurustudev.com:35729/livereload.js', array(), '20130115', false );
 	} else if( $host == 'localhost' ) {
-		wp_enqueue_script( 'livereload', 'localhost:35729/livereload.js', array(), '20130115', false );
+		wp_enqueue_script( 'livereload', 'http://localhost:35729/livereload.js', array(), '20130115', false );
 	}
 
 
