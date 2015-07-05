@@ -78,12 +78,6 @@ add_action( 'widgets_init', 'underscores_widgets_init' );
  * Enqueue scripts and styles.
  */
 function underscores_scripts() {
-	if ( !is_admin() ) {
-		// LETS LOAD JQUERY FROM GOOGLE IN THE HEADER
-		wp_deregister_script('jquery');
-		// wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false);
-		// wp_enqueue_script('jquery');
-	}
 	wp_enqueue_script( 'underscores-common.js', get_template_directory_uri() . '/js/build/production.min.js', array(), '20120206', true );
 
 	// Live Reload
